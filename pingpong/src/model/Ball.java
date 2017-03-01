@@ -11,19 +11,26 @@ package model;
 
 import java.awt.Graphics;
 
-public class Ball {
+public class Ball implements IBall, Drawable {
 
-    /**
-     * constructs a Ball
-     *
-     * @access public
-     *
-     * @param x - the x coordinate of the ball
-     * @param y - the y coordinate of the ball
-     * @param dx - a change in the x coordinate of a ball
-     * @param dy - a change in the y coordinate of a ball
-     * @author Tafadzwa Gonera
-     */
+    private final static int DIAMETER = 21;
+
+    // Coordinates of the ball
+    private int x;
+    private int y;
+
+    // Change in x-coordinate of ball in pixels
+    private int dx;
+
+    // Change in y-coordinate of ball in pixels
+    private int dy;
+
+    // Screen edges in pixels
+    private int rightEdge;
+    private int bottomEdge;
+    private int topEdge;
+    private int leftEdge;
+    
     public Ball(int x, int y, int dx, int dy) {
         this.dx = dx;
         this.dy = dy;
@@ -156,26 +163,5 @@ public class Ball {
     public int getWidth() {
         return DIAMETER;
     }
-    /**
-     * @var DIAMETER - the diameter of the ball in pixels
-     *
-     * @access private
-     */
-    private final static int DIAMETER = 21;
-    // the x coordinate of the ball in pixels
-    private int x,
-            // the y coordinate of the ball in pixels
-            y,
-            // a change in the x coordinate of a ball in pixels
-            dx,            
-            // a change in the y coordinate of a ball in pixels
-            dy,
-            // the right edge of the screen in pixels
-            rightEdge, 
-           // the bottom edge of the screen in pixels
-            bottomEdge,
-            // the top edge of the screen in pixels
-            topEdge,
-            // the left edge of the screen in pixels
-            leftEdge;
-}//end class
+
+}
