@@ -1,5 +1,3 @@
-package pingpong;
-
 import controller.Controller;
 import model.Ball;
 import model.Level;
